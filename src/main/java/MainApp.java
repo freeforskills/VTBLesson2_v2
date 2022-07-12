@@ -25,6 +25,8 @@ public class MainApp {
             uchastnik.intoduce();
             for (Pregradi pregrada : msvPrgrd) {
                 if (uchastnik.getStatus()) {
+                    System.out.println();
+                    pregrada.getinfo();
                     uchastnik.getStart(pregrada);
                 } else break;
             }
