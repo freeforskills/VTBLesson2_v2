@@ -5,11 +5,11 @@ import Pregradi.Runable;
 import Pregradi.Jumpable;
 
 public class Robot implements FunnyStarts {
-    String type;
-    String name;
+    private String type;
+    private String name;
     private int status;
-    int maxDistance;
-    int maxVisota;
+    private int maxDistance;
+    private int maxVisota;
 
     public Robot(String name,int maxDistance) {
         this.type = "Робот";

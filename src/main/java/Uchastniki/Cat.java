@@ -5,11 +5,11 @@ import Pregradi.Jumpable;
 import Pregradi.Runable;
 
 public class Cat implements FunnyStarts {
-    String type;
-    String name;
+    private String type;
+    private String name;
     private int status;
-    int maxDistance;
-    int maxVisota;
+    private int maxDistance;
+    private int maxVisota;
 
     public Cat(String name, int maxDistance, int maxVisota) {
         this.type = "Кошак";
