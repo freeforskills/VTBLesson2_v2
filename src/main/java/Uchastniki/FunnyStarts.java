@@ -13,5 +13,5 @@ public interface FunnyStarts {
 
     public boolean getStatus();
 
-    public void intoduce();
+    public void introduce();
 }

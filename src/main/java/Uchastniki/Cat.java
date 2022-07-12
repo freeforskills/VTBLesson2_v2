@@ -55,7 +55,7 @@ public class Cat implements FunnyStarts {
     }
 
     @Override
-    public void intoduce() {
+    public void introduce() {
         System.out.println(this.type + " по имени "+this.name+" может пробежать "+this.maxDistance
                 +" м. и подпрыгнуть на высоту "+this.maxVisota+" см.");
     }
