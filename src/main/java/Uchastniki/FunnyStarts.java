@@ -12,4 +12,6 @@ public interface FunnyStarts {
     public void run(Runable pregrada);
 
     public boolean getStatus();
+
+    public void intoduce();
 }

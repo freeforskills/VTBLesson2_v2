@@ -53,4 +53,10 @@ public class Cat implements FunnyStarts {
     public boolean getStatus() {
         return (this.status==1);
     }
+
+    @Override
+    public void intoduce() {
+        System.out.println(this.type + " по имени "+this.name+" может пробежать "+this.maxDistance
+                +" м. и подпрыгнуть на высоту "+this.maxVisota+" см.");
+    }
 }

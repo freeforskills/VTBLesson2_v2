@@ -22,6 +22,7 @@ public class MainApp {
         };
 
         for (FunnyStarts uchastnik : msvUchtnkv) {
+            uchastnik.intoduce();
             for (Pregradi pregrada : msvPrgrd) {
                 if (uchastnik.getStatus()) {
                     uchastnik.getStart(pregrada);
