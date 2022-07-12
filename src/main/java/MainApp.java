@@ -23,7 +23,9 @@ public class MainApp {
 
         for (FunnyStarts uchastnik : msvUchtnkv) {
             for (Pregradi pregradi : msvPrgrd) {
-                if (uchastnik.getStatus()) uchastnik.getStart(pregradi);
+                if (uchastnik.getStatus()) {
+                    uchastnik.getStart(pregradi);
+                } else break;
             }
             System.out.println();
         }
