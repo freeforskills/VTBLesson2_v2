@@ -5,7 +5,7 @@ import Pregradi.Jumpable;
 import Pregradi.Runable;
 
 
-public class Human implements Run, Jump {
+public class Human implements FunnyStarts {
     String type;
     String name;
     private int status;

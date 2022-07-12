@@ -2,8 +2,9 @@ package Uchastniki;
 
 import Pregradi.Pregradi;
 import Pregradi.Runable;
+import Pregradi.Jumpable;
 
-public class Robot implements Run{
+public class Robot implements FunnyStarts {
     String type;
     String name;
     private int status;
@@ -22,7 +23,7 @@ public class Robot implements Run{
     public void getStart(Pregradi pregrada) {
         switch (pregrada.getAction()){
             case RUN -> this.run((Runable) pregrada);
-            case JUMP -> this.jump();
+            case JUMP -> this.jump((Jumpable) pregrada);
         }
     }
 
@@ -37,7 +38,8 @@ public class Robot implements Run{
         } else {System.out.println(this.type+ " пробежал "+ distance);}
     }
 
-    private void jump(){
+    @Override
+    public void jump(Jumpable pregrada) {
         System.out.println("Робот не умеет прыгать");
         this.status = 0;
     }

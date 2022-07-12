@@ -1,5 +1,5 @@
 import Pregradi.Pregradi;
-import Uchastniki.Action;
+import Uchastniki.FunnyStarts;
 import Uchastniki.Cat;
 import Uchastniki.Human;
 import Uchastniki.Robot;
@@ -15,13 +15,13 @@ public class MainApp {
                 new Runner(8000)
         };
 
-        Action[] msvUchtnkv = {
+        FunnyStarts[] msvUchtnkv = {
                 new Cat("Мурзик",5000,200),
                 new Robot("Бендер",100000),
                 new Human("Васян",10000,80)
         };
 
-        for (Action uchastnik : msvUchtnkv) {
+        for (FunnyStarts uchastnik : msvUchtnkv) {
             for (Pregradi pregradi : msvPrgrd) {
                 if (uchastnik.getStatus()) uchastnik.getStart(pregradi);
             }

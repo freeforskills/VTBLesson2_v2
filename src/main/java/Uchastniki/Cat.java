@@ -4,7 +4,7 @@ import Pregradi.Pregradi;
 import Pregradi.Jumpable;
 import Pregradi.Runable;
 
-public class Cat implements Run,Jump{
+public class Cat implements FunnyStarts {
     String type;
     String name;
     private int status;
