@@ -32,7 +32,7 @@ public class Robot implements FunnyStarts {
 
     @Override
     public void swim(Swimable pregrada) {
-        System.out.println("робот не умеет плавать");
+        System.out.println("Робот не умеет плавать");
         this.status = 0;
     }
 
