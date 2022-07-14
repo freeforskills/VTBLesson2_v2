@@ -1,8 +1,6 @@
 package Uchastniki;
 
-import Pregradi.Pregradi;
-import Pregradi.Jumpable;
-import Pregradi.Runable;
+import Pregradi.*;
 
 public class Cat implements FunnyStarts {
     private String type;
@@ -10,6 +8,7 @@ public class Cat implements FunnyStarts {
     private int status;
     private int maxDistance;
     private int maxVisota;
+    private int maxSwim;
 
     public Cat(String name, int maxDistance, int maxVisota) {
         this.type = "Кошак";
@@ -17,16 +16,8 @@ public class Cat implements FunnyStarts {
         this.status = 1;
         this.maxDistance = maxDistance;
         this.maxVisota = maxVisota;
+        this.maxSwim = 0;
     }
-
-    @Override
-    public void getStart(Pregradi pregrada) {
-        switch (pregrada.getAction()){
-            case RUN -> this.run((Runable) pregrada);
-            case JUMP -> this.jump((Jumpable) pregrada);
-        }
-    }
-
     @Override
     public void jump(Jumpable pregrada) {
         int visota = pregrada.getValue();
@@ -47,6 +38,12 @@ public class Cat implements FunnyStarts {
         } else if (distance<this.maxDistance) {
             System.out.println(this.type+ " пробежал "+ distance +" и мог бы пробежать еще "+(this.maxDistance-distance));
         } else {System.out.println(this.type+ " пробежал "+ distance);}
+    }
+
+    @Override
+    public void swim(Swimable pregrada) {
+        System.out.println("Кошка не умеет плавать");
+        this.status = 0;
     }
 
     @Override

@@ -16,7 +16,7 @@ public class Runner implements Runable{
     }
 
     @Override
-    public void getinfo() {
+    public void getInfo() {
         System.out.println("Препятствие типа: "+this.description+" длинной "+this.dlinna+" м.");
     }
 

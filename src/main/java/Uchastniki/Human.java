@@ -1,8 +1,6 @@
 package Uchastniki;
 
-import Pregradi.Pregradi;
-import Pregradi.Jumpable;
-import Pregradi.Runable;
+import Pregradi.*;
 
 
 public class Human implements FunnyStarts {
@@ -11,23 +9,16 @@ public class Human implements FunnyStarts {
     private int status;
     private int maxDistance;
     private int maxVisota;
+    private int maxSwim;
 
-    public Human(String name, int maxDistance, int maxVisota) {
+    public Human(String name, int maxDistance, int maxVisota, int maxSwim) {
         this.type = "Чел";
         this.name = name;
         this.status = 1;
         this.maxDistance = maxDistance;
         this.maxVisota = maxVisota;
+        this.maxSwim = maxSwim;
     }
-
-    @Override
-    public void getStart(Pregradi pregrada) {
-        switch (pregrada.getAction()){
-            case RUN -> this.run((Runable) pregrada);
-            case JUMP -> this.jump((Jumpable) pregrada);
-        }
-    }
-
     @Override
     public void jump(Jumpable pregrada) {
         int visota = pregrada.getValue();
@@ -48,6 +39,17 @@ public class Human implements FunnyStarts {
         } else if (distance<this.maxDistance) {
             System.out.println(this.type+ " пробежал "+ distance +" и мог бы пробежать еще "+(this.maxDistance-distance));
         } else {System.out.println(this.type+ " пробежал "+ distance);}
+    }
+
+    @Override
+    public void swim(Swimable pregrada) {
+        int distance = pregrada.getValue();
+        if (distance>this.maxSwim){
+            System.out.println(this.type+ " не в силах проплыть расстояние "+distance);
+            this.status = 0;
+        } else if (distance<this.maxSwim) {
+            System.out.println(this.type+ " проплыл "+ distance +" и мог бы проплыть еще "+(this.maxSwim-distance));
+        } else {System.out.println(this.type+ " проплыл "+ distance);}
     }
 
     @Override

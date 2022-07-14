@@ -16,7 +16,7 @@ public class Wall implements Jumpable{
     }
 
     @Override
-    public void getinfo() {
+    public void getInfo() {
         System.out.println("Препятствие типа: "+this.description+" высотой "+this.visota+" cм.");
     }
 

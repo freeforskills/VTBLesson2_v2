@@ -5,5 +5,5 @@ public interface Pregradi {
 
     public Activities getAction();
 
-    public void getinfo();
+    public void getInfo();
 }
